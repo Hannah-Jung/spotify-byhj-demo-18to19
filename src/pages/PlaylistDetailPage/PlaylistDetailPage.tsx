@@ -6,7 +6,7 @@ import styles from "./PlaylistDetailPage.module.css"
 import { MusicNoteOutlined } from "@mui/icons-material"
 import useGetCurrentUserProfile from "../../hooks/useGetCurrentUserProfile"
 import useGetPlaylistItems from "../../hooks/useGetPlaylistItems"
-import { Table, TableBody, TableCell, TableHead, TableRow, Typography } from "@mui/material"
+import { Avatar, Table, TableBody, TableCell, TableHead, TableRow, Typography } from "@mui/material"
 import { useInView } from 'react-intersection-observer'
 import DesktopPlaylistItem from "./components/DesktopPlaylistItem"
 import { PAGE_LIMIT } from "../../configs/commonConfig"
@@ -70,7 +70,14 @@ return (
           {userProfile?.images?.length ? (
             <img className={styles.ownerImage} src={userProfile?.images[0].url} alt={userProfile.display_name || "User"} />
           ) : (
-            <div className={styles.ownerImagePlaceholder}>👤</div>
+            <Avatar 
+              src={userProfile?.images?.[0]?.url || undefined} 
+              sx={{ 
+                width: 24, 
+                height: 24, 
+                fontSize: 16,
+              }}
+            />
           )}
           <span className={styles.ownerText}>
             {userProfile?.display_name || "User"} {" • "}
