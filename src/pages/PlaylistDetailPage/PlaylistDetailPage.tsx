@@ -121,7 +121,7 @@ return (
                             width: '100%',
                             height: '100%' }}>
                 <Typography variant="subtitle2" color="text.primary">
-                  Find more
+                  Let's find something for your playlist
                 </Typography>
                 </div>
               </TableCell>

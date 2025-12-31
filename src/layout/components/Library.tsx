@@ -38,7 +38,6 @@ const Library = () => {
   };
   return (
     <div className={styles.library}>
-      <h2 style={{paddingLeft: 8}}>Playlist ({data?.pages[0]?.total || 0})</h2>
       {playlists.length === 0 ? (<EmptyPlaylist/>) : (
         <>
           <Playlist playlists={playlists} onPlaylistClick={handlePlaylistClick} selectedPlaylistId={selectedPlaylistId}/>

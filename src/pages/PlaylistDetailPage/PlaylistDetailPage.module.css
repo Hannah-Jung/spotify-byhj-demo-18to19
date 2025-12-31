@@ -45,6 +45,27 @@
   align-items: center;
   justify-content: center;
   box-shadow: rgba(255, 255, 255, 0.4) 3px 3px, rgba(255, 255, 255, 0.3) 6px 6px, rgba(255, 255, 255, 0.2) 9px 9px, rgba(255, 255, 255, 0.1) 12px 12px, rgba(255, 255, 255, 0.05) 15px 15px;
+  animation: shadowPulse 2s ease-in-out infinite;
+}
+
+@keyframes shadowPulse {
+  0%, 100% {
+    box-shadow:
+      rgba(255, 255, 255, 0.4) 3px 3px,
+      rgba(255, 255, 255, 0.3) 6px 6px,
+      rgba(255, 255, 255, 0.2) 9px 9px,
+      rgba(255, 255, 255, 0.1) 12px 12px,
+      rgba(255, 255, 255, 0.05) 15px 15px;
+  }
+
+  50% {
+    box-shadow:
+      rgba(255, 255, 255, 0.6) 4px 4px,
+      rgba(255, 255, 255, 0.5) 7px 7px,
+      rgba(255, 255, 255, 0.4) 10px 10px,
+      rgba(255, 255, 255, 0.3) 13px 13px,
+      rgba(255, 255, 255, 0.2) 16px 16px;
+  }
 }
 
 .imageContainer img {
